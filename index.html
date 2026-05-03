@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Links | A7X Blitar Raya - Final Dark Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Background Super Dark untuk kontras neon */
+            background: #050505;
+            color: #fff;
+            font-family: 'Fredoka One', cursive;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding: 0 1.25rem;
+        }
+
+        /* Base Glass Card */
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- DYNAMIC NEON GLOW EFFECTS --- */
+        /* Pink Glow (Rules) */
+        .card-pink:hover, .card-pink:active {
+            border-color: #ff1493;
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.7);
+            transform: translateY(-3px);
+        }
+        
+        /* Yellow Glow (Tickets) */
+        .card-yellow:hover, .card-yellow:active {
+            border-color: #eab308;
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
+            transform: translateY(-3px);
+        }
+
+        /* Green Glow (WhatsApp) */
+        .card-green:hover, .card-green:active {
+            border-color: #22c55e;
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+            transform: translateY(-3px);
+        }
+
+        /* Blue/Cyan Glow (Website) */
+        .card-blue:hover, .card-blue:active {
+            border-color: #06b6d4;
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
+            transform: translateY(-3px);
+        }
+
+        /* Purple Glow (Instagram) */
+        .card-purple:hover, .card-purple:active {
+            border-color: #a855f7;
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+            transform: translateY(-3px);
+        }
+
+        .pink-neon-text { 
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; 
+        }
+
+        .kawaii-float {
+            animation: floatRotate 6s infinite ease-in-out;
+        }
+
+        @keyframes floatRotate {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+
+        .glow-pulse-pink {
+            animation: pulse-pink 2s infinite alternate;
+        }
+
+        @keyframes pulse-pink {
+            from { border-color: rgba(255, 20, 147, 0.2); }
+            to { border-color: #ff1493; box-shadow: 0 0 12px rgba(255, 20, 147, 0.5); }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center min-h-screen pb-12 pt-10">
+
+    <div id="particles-js"></div>
+
+    <div class="main-content max-w-[420px] flex flex-col items-center text-center">
+        <!-- Profile Section -->
+        <div class="relative group mb-6">
+            <div class="absolute -inset-1 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 rounded-full blur opacity-40 animate-pulse"></div>
+            <div class="relative w-32 h-32 kawaii-float">
+                <img src="a7xblitar.jpg" alt="A7X Blitar Raya" class="w-full h-full object-cover rounded-full border-4 border-[#111] bg-black">
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-bold tracking-tighter text-[#ffb6c1] pink-neon-text mb-1 uppercase">A7X BLITAR RAYA</h1>
+        <p class="text-[10px] text-gray-500 tracking-[0.4em] uppercase font-bold mb-10">Deathbat Family Indonesia</p>
+
+        <!-- Links Container -->
+        <div class="w-full space-y-5">
+            
+            <!-- Link: Rules (Pink) -->
+            <a href="https://tiny.cc/RULES-a7xBLitar" class="glass-card card-pink glow-pulse-pink p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#ff1493] shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                    <i class="fas fa-scroll text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Fanbase Rules</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Wajib baca sebelum moshpit!</p>
+                </div>
+            </a>
+
+            <!-- Link: Tiket (Yellow) -->
+            <a href="https://www.tiket.com/en-id/to-do/avenged-sevenfold-indonesia-2026" target="_blank" class="glass-card card-yellow p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]">
+                    <i class="fas fa-ticket-alt text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Tiket Konser 2026</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Amankan slot moshpit-mu!</p>
+                </div>
+            </a>
+
+            <!-- Link: Merchandise (Pink/Red) -->
+            <a href="https://a7xblitar.web.id/merch.html" class="glass-card card-pink p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(219,39,119,0.4)]">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Official Merch</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Atribut Perang Deathbat</p>
+                </div>
+            </a>
+
+            <!-- Link: WhatsApp (Green) -->
+            <a href=" https://chat.whatsapp.com/F6p4rFx2CDoKu76h1egyML" target="_blank" class="glass-card card-green p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(34,197,94,0.4)]">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">WhatsApp Group</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Moshpit bareng cah Blitar</p>
+                </div>
+            </a>
+
+            <!-- Link: Website & IG (Grid) -->
+            <div class="grid grid-cols-2 gap-4">
+                <a href="https://a7xblitar.web.id" class="glass-card card-blue p-4 rounded-2xl flex flex-col items-center justify-center gap-2">
+                    <i class="fas fa-globe text-cyan-400 text-xl"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Website</span>
+                </a>
+                <a href="https://instagram.com/a7xblitar" target="_blank" class="glass-card card-purple p-4 rounded-2xl flex flex-col items-center justify-center gap-2">
+                    <i class="fab fa-instagram text-purple-400 text-xl"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Instagram</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Animated Footer -->
+        <div class="mt-16 w-full">
+            <div class="flex gap-8 justify-center mb-8">
+                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-tiktok text-xl"></i></a>
+                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+            </div>
+            <p class="text-[8px] text-gray-700 tracking-[0.5em] font-bold uppercase mb-2">Developed by THE FALLEN_BLITAR</p>
+            <p class="text-[7px] text-gray-800 uppercase font-bold tracking-widest">A Little Piece of Heaven in Blitar City</p>
+        </div>
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#ffffff", "#ff1493", "#eab308"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.2, "random": true },
+                "size": { "value": 1.5, "random": true },
+                "move": { "enable": true, "speed": 0.6, "direction": "top", "random": true, "out_mode": "out" }
+            }
+        });
+    </script>
+</body>
+</html>
