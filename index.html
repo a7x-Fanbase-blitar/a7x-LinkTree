@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://a7xblitar.web.id/">
+    
+    <!-- SEO & Metadata -->
+    <title>Links | A7X Blitar Raya - Deathbat Indonesia</title>
+    <meta name="description" content="Portal resmi Deathbat Blitar Raya. Link pendaftaran, grup WA, tiket konser Avenged Sevenfold 2026, dan merchandise resmi Deathbat Blitar Raya .">
+    <meta name="keywords" content="A7X Blitar Raya, Deathbat Blitar, Avenged Sevenfold Indonesia, A7X Nation, THE FALLEN_BLITAR, a7x blitar">
+    <meta name="author" content="THE FALLEN_BLITAR">
+    
+    <!-- Open Graph -->
     <meta property="og:title" content="A7X Blitar Raya - Deathbat Indonesia">
     <meta property="og:description" content="Deathbat Family Indonesia - A Little Piece of Heaven in Blitar City. Join the moshpit!">
-    <meta property="og:image" content="https://a7xblitar.web.id/a7xblitar.png">
+    <meta property="og:image" content="https://a7xblitar.site/a7xblitar.png">
+    <meta property="og:url" content="https://a7xblitar.site/">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://a7xblitar.web.id/">
-    <meta property="twitter:title" content="A7X Blitar Raya - Deathbat Indonesia">
-    <meta property="twitter:description" content="Deathbat Family Indonesia - A Little Piece of Heaven in Blitar City. Join the moshpit!">
-    <meta property="twitter:image" content="https://a7xblitar.web.id/a7xblitar.png">
-    <title>Links | A7X Blitar Raya - Deatbat Indonesia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <style>
+        :root {
+            --neon-pink: #ff1493;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            background: #050505;
+            background-color: #050505;
+            /* Background image bertema gelap & keren */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                              url('blitar.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #fff;
-            font-family: 'Fredoka One', cursive;
-            -webkit-tap-highlight-color: transparent;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         #particles-js {
@@ -37,197 +46,194 @@
             height: 100%;
             z-index: 1;
             top: 0;
-            left: 0;
-            opacity: 0.4;
+            pointer-events: none;
         }
 
         .main-content {
             position: relative;
             z-index: 10;
             width: 100%;
-            padding: 0 1.25rem;
+            max-width: 420px;
+            margin: 0 auto;
+            padding: 2.5rem 1.25rem;
         }
 
+        /* Glassmorphism Card Style */
         .glass-card {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            padding: 1.1rem;
+            margin-bottom: 1.25rem;
+            text-decoration: none;
         }
 
-        /* Neon Glow Effects */
-        .card-pink:hover, .card-pink:active {
-            border-color: #ff1493;
-            box-shadow: 0 0 25px rgba(255, 20, 147, 0.7);
-            transform: translateY(-3px);
-        }
-        
-        .card-yellow:hover, .card-yellow:active {
-            border-color: #eab308;
-            box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
-            transform: translateY(-3px);
+        .glass-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--neon-pink);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
         }
 
-        .card-green:hover, .card-green:active {
-            border-color: #22c55e;
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
-            transform: translateY(-3px);
+        /* Icon Styles - Warna Mirip Aslinya */
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
         }
 
-        .card-blue:hover, .card-blue:active {
-            border-color: #06b6d4;
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
-            transform: translateY(-3px);
+        .bg-wa { background: #25D366; color: white; }
+        .bg-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
+        .bg-tiket { background: #F7D117; color: #000; }
+        .bg-rules { background: var(--neon-pink); color: white; }
+        .bg-merch { background: #e11d48; color: white; }
+        .bg-web { background: #0891b2; color: white; }
+        .bg-music { background: #ea580c; color: white; }
+
+        .brand-text {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 0 0 12px rgba(255, 20, 147, 0.8);
         }
 
-        .card-purple:hover, .card-purple:active {
-            border-color: #a855f7;
-            box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
-            transform: translateY(-3px);
+        .avatar-glow {
+            border: 3px solid rgba(255, 20, 147, 0.5);
+            box-shadow: 0 0 25px rgba(255, 20, 147, 0.4);
+            animation: pulse-glow 2.5s infinite;
         }
 
-        .card-orange:hover, .card-orange:active {
-            border-color: #f97316;
-            box-shadow: 0 0 25px rgba(249, 115, 22, 0.7);
-            transform: translateY(-3px);
+        @keyframes pulse-glow {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 20, 147, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 35px rgba(255, 20, 147, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 20, 147, 0.4); }
         }
 
-        .pink-neon-text { 
-            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; 
-        }
-
-        .kawaii-float {
-            animation: floatRotate 6s infinite ease-in-out;
-        }
-
-        @keyframes floatRotate {
-            0%, 100% { transform: translateY(0) rotate(-1deg); }
-            50% { transform: translateY(-15px) rotate(1deg); }
-        }
-
-        .glow-pulse-pink {
-            animation: pulse-pink 2s infinite alternate;
-        }
-
-        @keyframes pulse-pink {
-            from { border-color: rgba(255, 20, 147, 0.2); }
-            to { border-color: #ff1493; box-shadow: 0 0 12px rgba(255, 20, 147, 0.5); }
+        .footer-text {
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
-<body class="flex flex-col items-center min-h-screen pb-12 pt-10">
+<body>
 
     <div id="particles-js"></div>
 
-    <div class="main-content max-w-[420px] flex flex-col items-center text-center">
-        <div class="relative group mb-6">
-            <div class="absolute -inset-1 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 rounded-full blur opacity-40 animate-pulse"></div>
-            <div class="relative w-32 h-32 kawaii-float">
-                <img src="a7xblitar.png" alt="A7X Blitar Raya" class="w-full h-full object-cover rounded-full border-4 border-[#111] bg-black">
+    <main class="main-content flex flex-col items-center">
+        <!-- Profile -->
+        <header class="text-center mb-10">
+            <div class="w-32 h-32 mb-6 mx-auto">
+                <img src="a7xblitar.png" alt="A7X Blitar Raya" class="w-full h-full rounded-full object-cover avatar-glow bg-black">
             </div>
-        </div>
+            <h1 class="text-3xl font-extrabold brand-text text-white mb-2">A7X BLITAR RAYA</h1>
+            <p class="text-[10px] text-pink-400 font-bold tracking-[0.4em] uppercase">Deathbat Family Indonesia</p>
+        </header>
 
-        <h1 class="text-3xl font-bold tracking-tighter text-[#ffb6c1] pink-neon-text mb-1 uppercase">A7X BLITAR RAYA</h1>
-        <p class="text-[10px] text-gray-500 tracking-[0.4em] uppercase font-bold mb-10">Deathbat Family Indonesia</p>
-
-        <div class="w-full space-y-5">
+        <!-- Links (Semua Link asli tetap ada) -->
+        <div class="w-full">
             
-            <a href="https://tiny.cc/RULES-a7xBLitar" class="glass-card card-pink glow-pulse-pink p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#ff1493] shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                    <i class="fas fa-scroll text-xl"></i>
+            <a href="https://tiny.cc/RULES-a7xBLitar" class="glass-card">
+                <div class="icon-wrapper bg-rules shadow-lg shadow-pink-900/40">
+                    <i class="fas fa-scroll"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Fanbase Rules</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Fanbase Rules</p>
                     <p class="text-[9px] text-gray-400 uppercase">Wajib baca sebelum moshpit!</p>
                 </div>
             </a>
 
-            <a href="https://www.tiket.com/en-id/to-do/avenged-sevenfold-indonesia-2026" target="_blank" class="glass-card card-yellow p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]">
-                    <i class="fas fa-ticket-alt text-xl"></i>
+            <a href="https://www.tiket.com/en-id/to-do/avenged-sevenfold-indonesia-2026" target="_blank" class="glass-card">
+                <div class="icon-wrapper bg-tiket">
+                    <i class="fas fa-ticket-alt"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Tiket Konser 2026</p>
-                    <p class="text-[9px] text-gray-400 uppercase">Amankan slot moshpit-mu!</p>
-                </div>
-            </a>
-
-            <a href="https://a7xblitar.web.id/musik" class="glass-card card-orange p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(249,115,22,0.4)]">
-                    <i class="fas fa-compact-disc fa-spin text-xl"></i>
-                </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Deathbat Player</p>
-                    <p class="text-[9px] text-gray-400 uppercase">Dengerin lagu A7X favoritmu</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Tiket Konser 2026</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Amankan slot barisan depan!</p>
                 </div>
             </a>
 
-            <a href="https://a7xblitar.web.id/merch.html" class="glass-card card-pink p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(219,39,119,0.4)]">
-                    <i class="fas fa-shopping-bag text-xl"></i>
+            <a href="https://a7xblitar.web.id/musik" class="glass-card">
+                <div class="icon-wrapper bg-music">
+                    <i class="fas fa-compact-disc fa-spin"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Official Merch</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Deathbat Player</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Streaming hits favoritmu</p>
+                </div>
+            </a>
+
+            <a href="https://a7xblitar.web.id/merch.html" class="glass-card">
+                <div class="icon-wrapper bg-merch">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Official Merch</p>
                     <p class="text-[9px] text-gray-400 uppercase">Atribut Perang Deathbat</p>
                 </div>
             </a>
 
-            <a href="https://chat.whatsapp.com/F6p4rFx2CDoKu76h1egyML" target="_blank" class="glass-card card-green p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(34,197,94,0.4)]">
-                    <i class="fab fa-whatsapp text-2xl"></i>
+            <a href="https://chat.whatsapp.com/F6p4rFx2CDoKu76h1egyML" target="_blank" class="glass-card">
+                <div class="icon-wrapper bg-wa">
+                    <i class="fab fa-whatsapp"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">WhatsApp Group</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">WhatsApp Group</p>
                     <p class="text-[9px] text-gray-400 uppercase">Moshpit bareng cah Blitar</p>
                 </div>
             </a>
 
-            <a href="https://a7xblitar.web.id" class="glass-card card-blue p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(6,182,212,0.4)]">
-                    <i class="fas fa-globe text-xl"></i>
+            <a href="https://a7xblitar.web.id" class="glass-card">
+                <div class="icon-wrapper bg-web">
+                    <i class="fas fa-globe"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Official Website</p>
-                    <p class="text-[9px] text-gray-400 uppercase">Portal utama A7X Blitar</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Official Website</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Portal Utama A7X Blitar</p>
                 </div>
             </a>
 
-            <a href="https://instagram.com/a7xblitar" target="_blank" class="glass-card card-purple p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+            <a href="https://instagram.com/a7xblitar" target="_blank" class="glass-card">
+                <div class="icon-wrapper bg-ig">
                     <i class="fab fa-instagram text-xl"></i>
                 </div>
-                <div class="text-left">
-                    <p class="text-xs font-black text-white tracking-widest uppercase">Instagram Feed</p>
+                <div class="ml-4">
+                    <p class="text-xs font-black uppercase text-white tracking-widest">Instagram Feed</p>
                     <p class="text-[9px] text-gray-400 uppercase">Update kegiatan teranyar</p>
                 </div>
             </a>
 
         </div>
 
-        <div class="mt-16 w-full">
-            <div class="flex gap-8 justify-center mb-8">
-                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-tiktok text-xl"></i></a>
-                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
-                <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+        <!-- Footer -->
+        <footer class="mt-12 text-center">
+            <div class="flex gap-6 justify-center mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tiktok text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
             </div>
-            <p class="text-[8px] text-gray-700 tracking-[0.5em] font-bold uppercase mb-2">Developed by THE FALLEN_BLITAR</p>
-            <p class="text-[7px] text-gray-800 uppercase font-bold tracking-widest">A Little Piece of Heaven in Blitar City</p>
-        </div>
-    </div>
+            <p class="text-[8px] footer-text uppercase font-bold mb-1">Developed by THE FALLEN_BLITAR</p>
+            <p class="text-[7px] text-gray-600 uppercase tracking-widest">A Little Piece of Heaven in Blitar City</p>
+        </footer>
+    </main>
 
     <script>
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": ["#ffffff", "#ff1493", "#eab308"] },
+                "number": { "value": 30, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#ff1493", "#ffffff"] },
                 "shape": { "type": "circle" },
-                "opacity": { "value": 0.2, "random": true },
+                "opacity": { "value": 0.3, "random": true },
                 "size": { "value": 1.5, "random": true },
-                "move": { "enable": true, "speed": 0.6, "direction": "top", "random": true, "out_mode": "out" }
+                "move": { "enable": true, "speed": 1.2, "direction": "top", "random": true, "out_mode": "out" }
             }
         });
     </script>
