@@ -9,7 +9,6 @@
     <meta property="og:description" content="Deathbat Family Indonesia - A Little Piece of Heaven in Blitar City. Join the moshpit!">
     <meta property="og:image" content="https://a7xblitar.web.id/a7xblitar.png">
 
-<!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://a7xblitar.web.id/">
     <meta property="twitter:title" content="A7X Blitar Raya - Deathbat Indonesia">
@@ -26,7 +25,6 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            /* Background Super Dark untuk kontras neon */
             background: #050505;
             color: #fff;
             font-family: 'Fredoka One', cursive;
@@ -50,7 +48,6 @@
             padding: 0 1.25rem;
         }
 
-        /* Base Glass Card */
         .glass-card {
             background: rgba(20, 20, 20, 0.6);
             backdrop-filter: blur(15px);
@@ -62,39 +59,40 @@
             overflow: hidden;
         }
 
-        /* --- DYNAMIC NEON GLOW EFFECTS --- */
-        /* Pink Glow (Rules) */
+        /* Neon Glow Effects */
         .card-pink:hover, .card-pink:active {
             border-color: #ff1493;
             box-shadow: 0 0 25px rgba(255, 20, 147, 0.7);
             transform: translateY(-3px);
         }
         
-        /* Yellow Glow (Tickets) */
         .card-yellow:hover, .card-yellow:active {
             border-color: #eab308;
             box-shadow: 0 0 25px rgba(234, 179, 8, 0.7);
             transform: translateY(-3px);
         }
 
-        /* Green Glow (WhatsApp) */
         .card-green:hover, .card-green:active {
             border-color: #22c55e;
             box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
             transform: translateY(-3px);
         }
 
-        /* Blue/Cyan Glow (Website) */
         .card-blue:hover, .card-blue:active {
             border-color: #06b6d4;
             box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
             transform: translateY(-3px);
         }
 
-        /* Purple Glow (Instagram) */
         .card-purple:hover, .card-purple:active {
             border-color: #a855f7;
             box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+            transform: translateY(-3px);
+        }
+
+        .card-orange:hover, .card-orange:active {
+            border-color: #f97316;
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.7);
             transform: translateY(-3px);
         }
 
@@ -126,7 +124,6 @@
     <div id="particles-js"></div>
 
     <div class="main-content max-w-[420px] flex flex-col items-center text-center">
-        <!-- Profile Section -->
         <div class="relative group mb-6">
             <div class="absolute -inset-1 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 rounded-full blur opacity-40 animate-pulse"></div>
             <div class="relative w-32 h-32 kawaii-float">
@@ -137,10 +134,8 @@
         <h1 class="text-3xl font-bold tracking-tighter text-[#ffb6c1] pink-neon-text mb-1 uppercase">A7X BLITAR RAYA</h1>
         <p class="text-[10px] text-gray-500 tracking-[0.4em] uppercase font-bold mb-10">Deathbat Family Indonesia</p>
 
-        <!-- Links Container -->
         <div class="w-full space-y-5">
             
-            <!-- Link: Rules (Pink) -->
             <a href="https://tiny.cc/RULES-a7xBLitar" class="glass-card card-pink glow-pulse-pink p-4 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#ff1493] shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                     <i class="fas fa-scroll text-xl"></i>
@@ -151,7 +146,6 @@
                 </div>
             </a>
 
-            <!-- Link: Tiket (Yellow) -->
             <a href="https://www.tiket.com/en-id/to-do/avenged-sevenfold-indonesia-2026" target="_blank" class="glass-card card-yellow p-4 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center text-black shadow-[0_0_15px_rgba(234,179,8,0.4)]">
                     <i class="fas fa-ticket-alt text-xl"></i>
@@ -162,7 +156,16 @@
                 </div>
             </a>
 
-            <!-- Link: Merchandise (Pink/Red) -->
+            <a href="https://a7xblitar.web.id/musik" class="glass-card card-orange p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(249,115,22,0.4)]">
+                    <i class="fas fa-compact-disc fa-spin text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Deathbat Player</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Dengerin lagu A7X favoritmu</p>
+                </div>
+            </a>
+
             <a href="https://a7xblitar.web.id/merch.html" class="glass-card card-pink p-4 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(219,39,119,0.4)]">
                     <i class="fas fa-shopping-bag text-xl"></i>
@@ -173,8 +176,7 @@
                 </div>
             </a>
 
-            <!-- Link: WhatsApp (Green) -->
-            <a href=" https://chat.whatsapp.com/F6p4rFx2CDoKu76h1egyML" target="_blank" class="glass-card card-green p-4 rounded-2xl flex items-center gap-4">
+            <a href="https://chat.whatsapp.com/F6p4rFx2CDoKu76h1egyML" target="_blank" class="glass-card card-green p-4 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(34,197,94,0.4)]">
                     <i class="fab fa-whatsapp text-2xl"></i>
                 </div>
@@ -184,20 +186,28 @@
                 </div>
             </a>
 
-            <!-- Link: Website & IG (Grid) -->
-            <div class="grid grid-cols-2 gap-4">
-                <a href="https://a7xblitar.web.id" class="glass-card card-blue p-4 rounded-2xl flex flex-col items-center justify-center gap-2">
-                    <i class="fas fa-globe text-cyan-400 text-xl"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest">Website</span>
-                </a>
-                <a href="https://instagram.com/a7xblitar" target="_blank" class="glass-card card-purple p-4 rounded-2xl flex flex-col items-center justify-center gap-2">
-                    <i class="fab fa-instagram text-purple-400 text-xl"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-widest">Instagram</span>
-                </a>
-            </div>
+            <a href="https://a7xblitar.web.id" class="glass-card card-blue p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                    <i class="fas fa-globe text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Official Website</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Portal utama A7X Blitar</p>
+                </div>
+            </a>
+
+            <a href="https://instagram.com/a7xblitar" target="_blank" class="glass-card card-purple p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                    <i class="fab fa-instagram text-xl"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs font-black text-white tracking-widest uppercase">Instagram Feed</p>
+                    <p class="text-[9px] text-gray-400 uppercase">Update kegiatan teranyar</p>
+                </div>
+            </a>
+
         </div>
 
-        <!-- Animated Footer -->
         <div class="mt-16 w-full">
             <div class="flex gap-8 justify-center mb-8">
                 <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-tiktok text-xl"></i></a>
